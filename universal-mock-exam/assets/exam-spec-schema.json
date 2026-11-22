@@ -1,5 +1,5 @@
 {
-  "_说明": "universal-mock-exam 的试卷数据格式。build_exam.py 与 score_exam.py 都读这个文件。",
+  "_说明": "universal-mock-exam 的试卷数据格式。build_exam.py 与 score_exam.py 都读这个文件。注意：本文件只演示字段形状，仅含两道样题，数值不构成完整试卷，直接运行会因题量/分值不匹配而报错——先按你的考试补全 sections 与 questions。",
   "exam": {
     "name": "示例考试",
     "level": "初级",
