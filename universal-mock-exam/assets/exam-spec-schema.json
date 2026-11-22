@@ -1,0 +1,71 @@
+{
+  "_说明": "universal-mock-exam 的试卷数据格式。build_exam.py 与 score_exam.py 都读这个文件。",
+  "exam": {
+    "name": "示例考试",
+    "level": "初级",
+    "date": "2026-11-28",
+    "duration_min": 120,
+    "total_score": 300,
+    "pass_score": 180,
+    "grade_bands": [
+      { "label": "优秀", "min": 240, "max": 300 },
+      { "label": "良好", "min": 210, "max": 239 },
+      { "label": "合格", "min": 180, "max": 209 },
+      { "label": "未通过", "min": 0, "max": 179 }
+    ],
+    "basis": "官方资料 3 份 + 民间情报 6 条；预测性内容占比 0%",
+    "instructions": [
+      "本卷满分 300 分，考试时间 120 分钟。",
+      "客观题直接填写选项字母；主观题用英文作答，分点陈述。"
+    ]
+  },
+  "profile": {
+    "sections": [
+      { "id": "A", "title": "Section A 中国文化知识", "type": "mcq", "points_each": 3, "count": 20, "minutes": 15, "instructions": "Choose the best answer." }
+    ],
+    "difficulty_target": { "easy": 0.3, "medium": 0.5, "hard": 0.2 },
+    "weights": [
+      { "module": "A", "topic": "送礼禁忌", "weight": 6, "source": "官方考纲" }
+    ]
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "section": "A",
+      "type": "mcq",
+      "dimension": "Knowledge of Others",
+      "topic": "送礼禁忌",
+      "difficulty": "easy",
+      "points": 3,
+      "source_tag": "官方考纲",
+      "stem": "You are preparing a gift for an Italian business partner. Which is the safest choice?",
+      "options": [
+        "A. A set of sharp kitchen knives.",
+        "B. A gift with no price tag attached.",
+        "C. Flowers in an even number, wrapped in purple.",
+        "D. A bunch of chrysanthemums."
+      ],
+      "answer": "B",
+      "explanation": "Italian gift etiquette: avoid sharp objects, purple wrapping, chrysanthemums (funeral flowers) and visible price tags.",
+      "distractors": "A 触犯'刀剪断交'禁忌；C 紫色与偶数花束均不吉；D 菊花用于葬礼。"
+    },
+    {
+      "id": "D1",
+      "section": "D",
+      "type": "short_answer",
+      "dimension": "Attitude",
+      "topic": "态度类情境",
+      "difficulty": "medium",
+      "points": 20,
+      "source_tag": "共识预测",
+      "stem": "During a business trip you happen to be in Myanmar on the day of the Thingyan festival. Your local colleague invites you to join the celebration. What would you do, and why?",
+      "reference": "Accept with curiosity, ask about the etiquette, respect local customs, and treat the invitation as a relationship signal rather than a tour.",
+      "rubric": [
+        { "point": "表达参与意愿或开放态度", "score": 6, "keywords": ["join", "accept", "curious", "willing", "glad"] },
+        { "point": "主动了解习俗与禁忌", "score": 7, "keywords": ["ask", "learn", "custom", "etiquette", "respect"] },
+        { "point": "说明理由：关系与尊重", "score": 7, "keywords": ["relationship", "respect", "trust", "local"] }
+      ],
+      "common_errors": "直接回答 I would not go because I am busy——与考试倡导的开放、好奇、尊重背道而驰。"
+    }
+  ]
+}
