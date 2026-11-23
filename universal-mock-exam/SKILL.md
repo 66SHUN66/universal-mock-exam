@@ -123,8 +123,11 @@ python scripts/score_exam.py --spec exam_spec.json --responses responses.json --
 `references/profiles/ict.md`　跨文化能力考试（ICT，初级/中级/高级）
 `references/profiles/lanqiao.md`　蓝桥杯软件赛（C/C++、Java、Python、Web；大学 A/B/C 组；填空 + 编程，4 小时）
 `references/profiles/icpc.md`　ICPC / CCPC（3 人 5 小时，8–13 题，罚时制）
+`references/profiles/gre.md`　GRE General Test（英文档案：AWA + Verbal + Quant，2 小时，130–170 分，分节自适应）
 
 新增考试时复制该档案结构，填"事实 / 结构 / 高频考点 / 评分 / 情报现状 / 更新记录"六段。**档案只存可核验事实与推定结构，推定必须标注。**
+
+目标读者非中文时（如海外用户），档案与卷面一律用英文写，只保留必要的考试原名；`gre.md` 是英文档案的范例。
 
 ## 输出规范
 
