@@ -1,11 +1,10 @@
-# universal-mock-exam · 万能模拟考试
+> 已在 Agensi 技能市场上架（免费）：https://agensi.io/skills/universal-mock-exam-practice-papers-contest-prep
 
-> 已在 Agensi 技能市场上架（免费）：https://agensi.io/skills/universal-mock-exam-prediction-matched-practice-papers
-> 需要中文说明、社区版源码与离线使用，就用本仓库。
+# universal-mock-exam · 万能模拟考试
 
 一个可以装进 Agent 技能目录的「高拟合模考」Skill：先给考试建**命题画像**（官方考纲/大纲/样卷 + 短视频与内容平台的博主观点），再按考点权重、题型矩阵、难度结构组卷，最后自动判分、给采分点、定位薄弱点并排到考试日的日程。
 
-适用于任何考试与比赛：学科期末、考研、CET、职业资格、公考、蓝桥杯、医学词汇大赛、ICT 跨文化能力考试……算法竞赛（蓝桥杯、ICPC/CCPC、Codeforces）走**竞赛模式**。
+适用于任何考试与比赛：学科期末、考研、CET、职业资格、公考、蓝桥杯、医学词汇大赛、ICT 跨文化能力考试、GRE……算法竞赛（蓝桥杯、ICPC/CCPC、Codeforces）走**竞赛模式**。
 
 ## 它解决什么
 - **不是随机出题**：每道题都能追溯到画像里的考点、维度、难度与来源标签。
@@ -23,7 +22,8 @@ universal-mock-exam/
 │   └── profiles/
 │       ├── ict.md                ICT 跨文化能力考试（初级/中级/高级）
 │       ├── lanqiao.md            蓝桥杯软件赛（大学 A/B/C 组，4 小时，填空 + 编程）
-│       └── icpc.md               ICPC / CCPC（3 人 5 小时，8–13 题，罚时制）
+│       ├── icpc.md               ICPC / CCPC（3 人 5 小时，8–13 题，罚时制）
+│       └── gre.md                GRE General Test（英文档案：AWA + Verbal + Quant，2 小时，130–170 分）
 ├── assets/
 │   └── exam-spec-schema.json     试卷数据结构示例
 └── scripts/
@@ -58,8 +58,9 @@ python scripts/score_exam.py  --spec exam_spec.json --responses responses.json -
 - **ICT 跨文化能力考试**（`references/profiles/ict.md`）：CAK 六维，满分 300、180 及格、210 良好、240 优秀，120 分钟机考，客观题 + 简答 + 案例分析，英语作答。官方逐题分值未公开，档案给出可配置的推定结构并已标注。
 - **蓝桥杯软件赛**（`references/profiles/lanqiao.md`）：2010 年首届、第十六届 2025 年；6 大赛项；软件赛 5 个科目；研究生组与大学 A/B/C 组；校赛→省赛→国赛；省赛与决赛均 4 小时；线下赛点、禁网；结果填空题 + 编程大题（标准输入输出、自动评判）。逐题分值官方未公开，标为推定。
 - **ICPC / CCPC**（`references/profiles/icpc.md`）：3 人一队、5 小时、8–13 题、全过才 AC、每次错提交罚 20 分钟、排名先题数后罚时，附四档难度带。
+- **GRE General Test**（`references/profiles/gre.md`，英文）：AWA 1 篇 + Verbal 2 节 + Quant 2 节，约 2 小时，130–170 分制，分节自适应；档案写明换算为近似值、百分位不得固化。
 
-新增考试时复制该档案结构，填「事实 / 结构 / 高频考点 / 评分 / 情报现状 / 更新记录」六段；推定内容必须标 `推定`。
+新增考试时复制该档案结构，填「事实 / 结构 / 高频考点 / 评分 / 情报现状 / 更新记录」六段；推定内容必须标 `推定`。目标读者非中文时，档案与卷面一律用英文写。
 
 ## 边界
 - 不复刻受版权保护的真题原文或竞赛题库存量，只复刻结构与规律，题目全部原创。
@@ -68,7 +69,8 @@ python scripts/score_exam.py  --spec exam_spec.json --responses responses.json -
 
 ## 版本
 - v1.0（2026-11）：Step 0–6 主流程、六道质检门禁、两个脚本、ICT 档案。
-- v1.1（2026-11）：新增竞赛模式与蓝桥杯、ICPC/CCPC 两份档案；Agensi 上架链接。
+- v1.1（2026-11）：新增竞赛模式与蓝桥杯、ICPC/CCPC 两份档案。
+- v1.2（2026-11）：新增英文档案 GRE General Test，作为面向海外读者的档案范例。
 
 ## License
 MIT
